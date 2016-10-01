@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "corr <- function(directory, threshold = 0){\n        \n        files_list <- list.files(directory, full.names = TRUE)\n        coc <- data.frame()\n        corrs <- vector()\n        \n        for (i in 1:332){\n                \n                ccc <- sum(complete.cases(read.csv(files_list[i])))\n                \n                if (ccc > threshold) {\n                        my_data3 <- data.frame()\n                        my_data3 <- rbind(my_data3, read.csv(files_list[i]))\n                        coc <- my_data3[complete.cases(my_data3),]\n                        corrs <- c(corrs, cor(coc$sulfate, coc$nitrate))\n                }\n                \n        }\n        \n        corrs\n        \n        \n}",
+    "created" : 1475329854596.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3971106709",
+    "id" : "F001A9CC",
+    "lastKnownWriteTime" : 1475330902,
+    "last_content_update" : 1475330902008,
+    "path" : "C:/Users/Babis Alfs/OneDrive/Data Science Specialization/2. R Programming/Week 2 Assignment/RProgrammingWeek2Assignment/corr.R",
+    "project_path" : "corr.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

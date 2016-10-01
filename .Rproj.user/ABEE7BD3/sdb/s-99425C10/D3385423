@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "complete <- function(directory, ID = 1:332) {\n        \n        files_list <- list.files(directory, full.names = TRUE)\n        my_data2 <- data.frame()\n        colid <- data.frame()\n        for (i in ID) {\n                \n                my_data2 <- rbind(my_data2, sum(complete.cases(read.csv(files_list[i]))))\n                colid <- rbind(colid, i)\n        }\n        \n        cc <- cbind(colid, my_data2)\n        colnames(cc) <- c(\"id\", \"nobs\")\n        cc\n}",
+    "created" : 1475266709373.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "599217460",
+    "id" : "D3385423",
+    "lastKnownWriteTime" : 1475323269,
+    "last_content_update" : 1475323269540,
+    "path" : "C:/Users/Babis Alfs/OneDrive/Data Science Specialization/2. R Programming/Week 2 Assignment/RProgrammingWeek2Assignment/complete.R",
+    "project_path" : "complete.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
